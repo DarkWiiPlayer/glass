@@ -36,3 +36,15 @@ Glass offers the following loaders out of the box:
 * `yaml` loads a YAML file as a Lua table.
 
 \* For easier interoperability with other template loaders, the `discount` loader returns a static function which can be called to return the generated HTML. The markdown file is only parsed the first time.
+
+### Custom Loaders
+
+A glass loader is simply a Lua function that takes as its argument a path to a
+file and attempts to load it into a Lua value.
+
+Loaders will typically add an extension to the given file name before checking
+whether that file exists and can be loaded.
+
+When a loader cannot find the expected file, it should return `nil` to let glass
+continue the loader chain. When a loader returns a truthy value, this will be
+used and no further loaders will be tried.
