@@ -1,5 +1,5 @@
 --- Loader for YAML-Data using Lua-CYAML
--- @module restia.config.yaml
+-- @module glass.yaml
 
 local yaml = require 'lyaml'
 local readfile = require 'restia.config.readfile'

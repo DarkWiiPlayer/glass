@@ -1,5 +1,5 @@
 --- Loader for JSON-Data using Lua-CJSON
--- @module restia.config.json
+-- @module glass.json
 
 local json = require 'cjson'
 local readfile = require 'restia.cofnig.readfile'

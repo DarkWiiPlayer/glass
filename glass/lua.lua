@@ -1,5 +1,5 @@
 --- Loader for Lua files
--- @module restia.config.lua
+-- @module glass.lua
 
 --- Loads and compiles a Lua file and runs it.
 -- Returns the result of running the Lua file.

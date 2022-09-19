@@ -1,5 +1,5 @@
 --- Loader for MoonHTML files
--- @module restia.config.moonhtml
+-- @module glass.moonhtml
 
 
 local template = require 'restia.template'

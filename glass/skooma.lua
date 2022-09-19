@@ -1,5 +1,5 @@
 --- Loader for Skooma templates
--- @module restia.config.skooma
+-- @module glass.skooma
 
 local skooma = require 'skooma'
 

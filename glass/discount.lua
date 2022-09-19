@@ -1,5 +1,5 @@
 --- Loader for markdown files using lua-discount
--- @module restia.config.discount
+-- @module glass.discount
 
 local discount = require 'discount'
 

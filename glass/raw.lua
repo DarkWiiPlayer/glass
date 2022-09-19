@@ -1,5 +1,5 @@
 --- Loader for plain files
--- @module restia.config.readfile
+-- @module glass.readfile
 
 --- Loads a normal file as a string.
 -- @treturn string The content of the file

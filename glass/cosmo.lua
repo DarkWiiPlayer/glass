@@ -1,5 +1,5 @@
 --- Loader for cosmo templates.
--- @module restia.config.cosmo
+-- @module glass.cosmo
 
 local cosmo = require 'cosmo'
 local readfile = require 'restia.config.readfile'
