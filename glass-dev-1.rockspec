@@ -22,6 +22,7 @@ build = {
       ["glass.moonhtml_cosmo"] = "glass/moonhtml_cosmo.lua",
       ["glass.raw"] = "glass/raw.lua",
       ["glass.skooma"] = "glass/skooma.lua",
+      ["glass.table"] = "glass/table.lua",
       ["glass.yaml"] = "glass/yaml.lua"
    }
 }

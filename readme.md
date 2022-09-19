@@ -33,6 +33,7 @@ Glass offers the following loaders out of the box:
 * `moonhtml` loads a MoonHTML template and returns it as a function.
 * `readfile` loads a file as a string.
 * `skooma` loads a skooma template and returns it as a function.
+* `table` looks up values in a Lua table
 * `yaml` loads a YAML file as a Lua table.
 
 \* For easier interoperability with other template loaders, the `discount` loader returns a static function which can be called to return the generated HTML. The markdown file is only parsed the first time.
