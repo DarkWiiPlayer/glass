@@ -28,6 +28,7 @@ A glass loader is initialised with a list of loaders and will try each of them i
 Glass offers the following loaders out of the box:
 * `cosmo` loads cosmo templates
 * `discount` loads markdown files\*.
+* `environment` loads environment variables.
 * `json` loads a JSON file as a Lua table.
 * `lua` loads and executes a Lua file.
 * `moonhtml` loads a MoonHTML template and returns it as a function.
