@@ -8,7 +8,7 @@ description = {
    license = "Unlicense"
 }
 dependencies = {
-	"lfs"
+	"luafilesystem"
 }
 build = {
    type = "builtin",
@@ -19,7 +19,6 @@ build = {
       ["glass.json"] = "glass/json.lua",
       ["glass.lua"] = "glass/lua.lua",
       ["glass.moonhtml"] = "glass/moonhtml.lua",
-      ["glass.moonhtml_cosmo"] = "glass/moonhtml_cosmo.lua",
       ["glass.raw"] = "glass/raw.lua",
       ["glass.skooma"] = "glass/skooma.lua",
       ["glass.table"] = "glass/table.lua",
