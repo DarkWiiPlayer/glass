@@ -29,15 +29,17 @@ Glass offers the following loaders out of the box:
 * `cosmo` loads cosmo templates
 * `discount` loads markdown files\*.
 * `environment` loads environment variables.
-* `json` loads a JSON file as a Lua table.
+* `json` loads a JSON file as a Lua table. (requires `cjson`)
 * `lua` loads and executes a Lua file.
 * `moonhtml` loads a MoonHTML template and returns it as a function.
 * `readfile` loads a file as a string.
 * `skooma` loads a skooma template and returns it as a function.
 * `table` looks up values in a Lua table
-* `yaml` loads a YAML file as a Lua table.
+* `yaml` loads a YAML file as a Lua table. (requires `lyaml`)
 
 \* For easier interoperability with other template loaders, the `discount` loader returns a static function which can be called to return the generated HTML. The markdown file is only parsed the first time.
+
+Note that some of these loaders require additional dependencies that are not included with glass to keep the installation small.
 
 ### Custom Loaders
 
