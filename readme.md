@@ -34,7 +34,8 @@ Glass offers the following loaders out of the box:
 * `lua` loads and executes a Lua file.
 * `moonhtml` loads a MoonHTML template and returns it as a function.
 * `readfile` loads a file as a string.
-* `skooma` loads a skooma template and returns it as a function.
+* `skooma.html` loads a `.html.skooma` template and returns it as a function.
+* `skooma.xml` same as above for `.xml.skooma`.
 * `table` looks up values in a Lua table
 * `yaml` loads a YAML file as a Lua table. (requires `lyaml`)
 * `error` pseudo-loader that throws an error.
