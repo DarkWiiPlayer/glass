@@ -8,7 +8,13 @@ local config = {}
 
 local __metatable = {}
 function __metatable:__index(index)
-	if type(index)~="string" then return nil end
+	if type(index)~="string" then
+		return nil
+	end
+	local dot = index:find(".", 1, true)
+	if dot then
+		return self[index:sub(1, dot-1)][index:sub(dot+1)]
+	end
 	local path = self.__dir..'/'..index
 	local attributes = lfs.attributes(path)
 	if attributes and attributes.mode=='directory' then
