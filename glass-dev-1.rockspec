@@ -17,6 +17,7 @@ build = {
       ["glass.cosmo"] = "glass/cosmo.lua",
       ["glass.discount"] = "glass/discount.lua",
       ["glass.environment"] = "glass/environment.lua",
+      ["glass.error"] = "glass/error.lua",
       ["glass.json"] = "glass/json.lua",
       ["glass.lua"] = "glass/lua.lua",
       ["glass.moonhtml"] = "glass/moonhtml.lua",

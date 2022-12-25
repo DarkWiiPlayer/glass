@@ -17,6 +17,7 @@ Assume the file `app/config/settings.json` exists in your project directory with
 local glass = require 'glass'
 local config = glass.bind('app/config', {
    (require 'glass.json');
+   (require 'glass.error'); -- Throw error if nothing matches
 })
 print(config.settings.user.name) -- prints "User"
 ```
@@ -36,6 +37,7 @@ Glass offers the following loaders out of the box:
 * `skooma` loads a skooma template and returns it as a function.
 * `table` looks up values in a Lua table
 * `yaml` loads a YAML file as a Lua table. (requires `lyaml`)
+* `error` pseudo-loader that throws an error.
 
 \* For easier interoperability with other template loaders, the `discount` loader returns a static function which can be called to return the generated HTML. The markdown file is only parsed the first time.
 
