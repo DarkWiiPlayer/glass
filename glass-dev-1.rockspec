@@ -15,6 +15,7 @@ build = {
    modules = {
       glass = "glass.lua",
       ["glass.cosmo"] = "glass/cosmo.lua",
+      ["glass.csv"] = "glass/csv.lua",
       ["glass.discount"] = "glass/discount.lua",
       ["glass.environment"] = "glass/environment.lua",
       ["glass.error"] = "glass/error.lua",

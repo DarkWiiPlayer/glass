@@ -28,6 +28,7 @@ A glass loader is initialised with a list of loaders and will try each of them i
 ## Loaders
 Glass offers the following loaders out of the box:
 * `cosmo` loads cosmo templates
+* `csv` loads csv files (with header line)
 * `discount` loads markdown files\*.
 * `environment` loads environment variables.
 * `json` loads a JSON file as a Lua table. (requires `cjson`)
