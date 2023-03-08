@@ -2,7 +2,7 @@
 -- @module glass.json
 
 local json = require 'cjson'
-local readfile = require 'restia.cofnig.readfile'
+local read = require 'glass.raw'
 
 --- Loads a JSON-File and returns a corresponding Lua table.
 -- May return non-table values for invalid JSON,
@@ -11,7 +11,7 @@ local readfile = require 'restia.cofnig.readfile'
 -- @treturn table JSON-Data
 -- @function load
 return function(file)
-	local raw = readfile(file..'.json')
+	local raw = read(file..'.json')
 	if raw then
 		return json.decode(raw)
 	end

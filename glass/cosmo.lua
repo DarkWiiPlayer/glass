@@ -2,7 +2,7 @@
 -- @module glass.cosmo
 
 local cosmo = require 'cosmo'
-local readfile = require 'restia.config.readfile'
+local raw = require 'glass.raw'
 
 --- Loads a cosmo template from a file and returns the compiled template.
 -- Returns nil if no template can be found.
@@ -10,7 +10,7 @@ local readfile = require 'restia.config.readfile'
 -- @function load
 return function(name)
 	name = tostring(name) .. '.cosmo'
-	local text = readfile(name)
+	local text = raw(name)
 	if text then
 		return assert(cosmo.compile(text, name))
 	else

@@ -2,7 +2,7 @@
 -- @module glass.yaml
 
 local yaml = require 'lyaml'
-local readfile = require 'restia.config.readfile'
+local read = require 'glass.raw'
 
 --- Loads a YAML-File and returns a corresponding Lua table.
 -- May return non-table values for invalid YAML,
@@ -11,7 +11,7 @@ local readfile = require 'restia.config.readfile'
 -- @treturn table YAML-Data
 -- @function load
 return function(file)
-	local raw = readfile(file..'.yml') or readfile(file..'.yaml')
+	local raw = read(file..'.yml') or read(file..'.yaml')
 	if raw then
 		return yaml.load(raw)
 	end

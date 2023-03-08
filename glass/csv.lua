@@ -7,8 +7,8 @@ local csv = require 'streamcsv'
 -- CSV file is assumed to have a header row.
 -- @treturn table CSV-Data
 -- @function load
-return function(file)
-	local file = io.open(file..'.csv')
+return function(name)
+	local file = io.open(name..'.csv')
 	if file then
 		return csv.file(file)
 	end
