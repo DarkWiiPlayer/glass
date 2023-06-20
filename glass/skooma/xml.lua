@@ -17,7 +17,10 @@ end})
 -- @function load
 return function(name)
 	name = tostring(name)..'.xml.skooma'
-	local template = loadfile(name, "t", env)
+	local template, err = loadfile(name, "t", env)
+	if template == nil then
+		return nil, err
+	end
 	if setfenv then
 		setfenv(template, env)
 	end
