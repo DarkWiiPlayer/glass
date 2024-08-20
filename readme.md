@@ -31,6 +31,7 @@ Glass offers the following loaders out of the box:
 * `csv` loads csv files (with header line)
 * `discount` loads markdown files\*.
 * `environment` loads environment variables.
+* `fennel` loads and executes fennel files.
 * `json` loads a JSON file as a Lua table. (requires `cjson`)
 * `lua` loads and executes a Lua file.
 * `moonhtml` loads a MoonHTML template and returns it as a function.
@@ -53,6 +54,8 @@ file and attempts to load it into a Lua value.
 Loaders will typically add an extension to the given file name before checking
 whether that file exists and can be loaded.
 
-When a loader cannot find the expected file, it should return `nil` to let glass
-continue the loader chain. When a loader returns a truthy value, this will be
-used and no further loaders will be tried.
+A successful loader should return `true` followed by its result.
+When a loader can't load a key, it should return `false` and an optional
+description of why.
+When a loader encounters an error (file found but can't be parsed), it should
+error.
