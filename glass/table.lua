@@ -7,6 +7,9 @@
 -- @treturn function A loader function to be used with `glass.bind`
 return function(input)
 	return function(name)
-		return input[name:match("[^/].+$")]
+		local result = input[name:match("[^/].+$")]
+		if result then
+			return true, result
+		end
 	end
 end

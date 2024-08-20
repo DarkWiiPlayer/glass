@@ -11,8 +11,8 @@ local read = require 'glass.raw'
 -- @treturn table JSON-Data
 -- @function load
 return function(file)
-	local raw = read(file..'.json')
-	if raw then
-		return json.decode(raw)
+	local success, raw = read(file..'.json')
+	if success then
+		return true, json.decode(raw)
 	end
 end

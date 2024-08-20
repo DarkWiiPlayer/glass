@@ -14,10 +14,8 @@ return function(name)
 	local file = io.open(name)
 	if file then
 		local html = discount(file:read("*a"))
-		return function()
+		return true, function()
 			return html
 		end
-	else
-		return nil
 	end
 end

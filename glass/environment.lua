@@ -4,5 +4,5 @@
 --- Loads values from environment variables
 -- @treturn string The value of the environment variable
 return function(name)
-	return os.getenv(name:match("[^/].+$"))
+	return true, os.getenv(name:match("[^/].+$"))
 end

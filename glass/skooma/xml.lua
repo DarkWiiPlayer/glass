@@ -24,5 +24,5 @@ return function(name)
 	if setfenv then
 		setfenv(template, env)
 	end
-	return template
+	return true, template
 end

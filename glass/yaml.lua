@@ -11,8 +11,11 @@ local read = require 'glass.raw'
 -- @treturn table YAML-Data
 -- @function load
 return function(file)
-	local raw = read(file..'.yml') or read(file..'.yaml')
-	if raw then
-		return yaml.load(raw)
+	local success, raw = read(file..'.yml')
+	if not success then
+		success, raw = read(file..'.yaml')
+	end
+	if success then
+		return true, yaml.load(raw)
 	end
 end

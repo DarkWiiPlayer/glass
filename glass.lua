@@ -21,8 +21,8 @@ function __metatable:__index(index)
 		return config.bind(path, self.__loaders)
 	else
 		for _, loader in ipairs(self.__loaders) do
-			local result = loader(path)
-			if result then
+			local success, result = loader(path)
+			if success then
 				rawset(self, index, result)
 				return result
 			end

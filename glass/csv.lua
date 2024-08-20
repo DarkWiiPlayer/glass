@@ -10,6 +10,6 @@ local csv = require 'streamcsv'
 return function(name)
 	local file = io.open(name..'.csv')
 	if file then
-		return csv.file(file)
+		return true, csv.file(file)
 	end
 end

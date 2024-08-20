@@ -1,7 +1,6 @@
 --- Loader for MoonHTML files
 -- @module glass.moonhtml
 
-
 local template = require 'restia.template'
 
 --- Loads and compiles a moonhtml template.
@@ -11,7 +10,7 @@ return function(name)
 	name = tostring(name) .. '.moonhtml'
 	local file = io.open(name)
 	if file then
-		return assert(template.loadmoon(file:read("*a"), name))
+		return true, assert(template.loadmoon(file:read("*a"), name))
 	else
 		return nil
 	end

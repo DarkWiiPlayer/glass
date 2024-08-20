@@ -9,5 +9,7 @@
 -- @function load
 return function(name)
 	local f = loadfile(name..'.lua')
-	return f and f() or nil
+	if f then
+		return true, f()
+	end
 end

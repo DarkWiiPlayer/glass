@@ -12,8 +12,6 @@ return function(name)
 	name = tostring(name) .. '.cosmo'
 	local text = raw(name)
 	if text then
-		return assert(cosmo.compile(text, name))
-	else
-		return nil
+		return true, assert(cosmo.compile(text, name))
 	end
 end
