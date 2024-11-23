@@ -1,5 +1,5 @@
 package = "glass"
-version = "dev-1"
+version = "dev-2"
 source = {
 	url = "git+https://github.com/darkwiiplayer/glass"
 }
@@ -20,6 +20,7 @@ build = {
 		["glass.discount"] = "glass/discount.lua",
 		["glass.environment"] = "glass/environment.lua",
 		["glass.error"] = "glass/error.lua",
+		["glass.fennel"] = "glass/fennel.lua",
 		["glass.json"] = "glass/json.lua",
 		["glass.lua"] = "glass/lua.lua",
 		["glass.raw"] = "glass/raw.lua",
